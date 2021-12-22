@@ -5,8 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
-import pages.HomePage;
-import pages.SearchResultPage;
+import pages.*;
 
 import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
@@ -35,6 +34,9 @@ public class BaseTest {
     public WebDriver getDriver() {
         return driver;
     }
+    public BasePage getBasePage(){
+        return new BasePage(getDriver());
+    }
 
     public HomePage getHomePage() {
         return new HomePage(getDriver());
@@ -42,5 +44,16 @@ public class BaseTest {
 
     public SearchResultPage getSearchResultPage() {
         return new SearchResultPage(getDriver());
+    }
+
+    public IphonePage getIphonePage() {
+        return new IphonePage(getDriver());
+    }
+
+    public AppleStorePage getAppleStorePage() {
+        return new AppleStorePage(getDriver());
+    }
+    public RegistrationPage getRegistrationPage(){
+        return new RegistrationPage(getDriver());
     }
 }

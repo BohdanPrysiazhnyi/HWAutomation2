@@ -6,10 +6,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SearchResultTests extends BaseTest {
+
     private static final String KEY_WORD = "iPhone 13";
     private static final String EXPECTED_QUERY = "query=iPhone";
     private static final int PRODUCTS_QUANTITY = 12;
-
 
 
     @Test
